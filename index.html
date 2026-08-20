@@ -958,7 +958,25 @@
             }
 
         }
+        .activity-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
 
+.activity-card-link .activity-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.activity-card-link:hover .activity-card {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.activity-card-link:hover h3 {
+    color: #67a62b;
+}
     </style>
 
 </head>

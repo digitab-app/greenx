@@ -991,7 +991,66 @@
 .activity-card-link:hover .activity-card {
     transform: translateY(-5px);
 }
-        
+/* ================================
+   PERBAIKAN GRID PROGRAM SEKOLAH
+   ================================ */
+
+.activity-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Kartu biasa */
+.activity-grid > .activity-card {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Kartu yang dibungkus link */
+.activity-grid > .activity-card-link {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Pastikan kartu di dalam link memenuhi kolom */
+.activity-grid > .activity-card-link > .activity-card {
+    width: 100%;
+    height: 100%;
+}
+
+/* Efek hover tetap bagus */
+.activity-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.activity-card-link:hover .activity-card {
+    transform: translateY(-5px);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .activity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+}
+
+/* HP */
+@media (max-width: 600px) {
+
+    .activity-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+}        
     </style>
 
 </head>
@@ -1445,8 +1504,6 @@
 
             </article>
 
-
-
             <!-- PROGRAM 2 -->
 
             <a href="bank-sampah.html" class="activity-card-link">
@@ -1890,39 +1947,102 @@
 
 
 
-        <div class="activity-grid">
+       <div class="activity-grid">
+
+    <!-- PENGHIJAUAN SEKOLAH -->
+    <article class="activity-card">
+
+        <div class="activity-image">
+            <img
+                src="images/penghijauan-sekolah.jpg"
+                alt="Penghijauan Sekolah">
+        </div>
+
+        <div class="activity-content">
+
+            <h3>Penghijauan Sekolah</h3>
+
+            <p>
+                Menanam pohon dan tanaman untuk menciptakan
+                lingkungan sekolah yang sejuk dan asri.
+            </p>
+
+            <a href="#" class="read-more">
+                Selengkapnya →
+            </a>
+
+        </div>
+
+    </article>
 
 
-            <!-- ACTIVITY 1 -->
+    <!-- BANK SAMPAH SEKOLAH -->
+    <a href="bank-sampah.html"
+       class="activity-card-link">
 
-            <article class="activity-card reveal">
+        <article class="activity-card">
 
-                <div class="activity-image">
+            <div class="activity-image">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=85"
-                        alt="Menanam pohon">
+                <img
+                    src="images/bank-sampah-sekolah.png"
+                    alt="Bank Sampah Sekolah">
 
-                </div>
+            </div>
 
-                <div class="activity-content">
+            <div class="activity-content">
 
-                    <div class="activity-date">
-                        20 MEI 2026
-                    </div>
+                <h3>
+                    Bank Sampah Sekolah
+                </h3>
 
-                    <h3>
-                        Aksi Tanam 1000 Pohon
-                    </h3>
+                <p>
+                    Mengumpulkan, memilah, dan mengelola
+                    sampah agar memiliki nilai ekonomi.
+                </p>
 
-                    <p>
-                        Siswa bersama guru menanam pohon
-                        di halaman sekolah dan area sekitar.
-                    </p>
+                <span class="read-more">
+                    Selengkapnya →
+                </span>
 
-                </div>
+            </div>
 
-            </article>
+        </article>
+
+    </a>
+
+
+    <!-- KOMPOSTING -->
+    <article class="activity-card">
+
+        <div class="activity-image">
+
+            <img
+                src="images/komposting.jpg"
+                alt="Komposting">
+
+        </div>
+
+        <div class="activity-content">
+
+            <h3>
+                Komposting
+            </h3>
+
+            <p>
+                Mengolah sampah organik menjadi kompos
+                untuk pupuk tanaman sekolah.
+            </p>
+
+            <a href="#" class="read-more">
+                Selengkapnya →
+            </a>
+
+        </div>
+
+    </article>
+
+</div>
 
 
 
@@ -1959,8 +2079,6 @@
     </article>
 
 </a>
-
-
 
             <!-- ACTIVITY 3 -->
 
